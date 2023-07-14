@@ -68,7 +68,7 @@ form.addEventListener('submit', (event) => {
     if(content === ''){
         alert(`Debes agregar contenido en el input!`)
     }else{
-        form.reset()
+        
         console.log(`entre en el trim`)
         console.log(tareaNueva.value.length)
         console.log(tareaNueva.value.trim())
@@ -76,13 +76,15 @@ form.addEventListener('submit', (event) => {
             id: generarNumeroUnico(),
             name: tareaNueva.value,
             done: false,
-        });
+            
+        })
+        
         //actualizo en html
         renderHTML();
         // formateo el form
         form.reset()
     }
-
+    form.reset();
     // if(tareaNueva.value === ''){
     //     alert(`Debes agregar contenido en el input!`)
     // }else if(tareaNueva.value.length > 1){
